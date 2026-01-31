@@ -2,45 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VERA-AI-CORE | Panel de Generación</title>
+    <title>VERA-AI | Factory de Contenidos</title>
     <style>
-        body { background: #050a10; color: #00f2ff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; text-align: center; }
-        .container { border: 2px solid #00f2ff; border-radius: 15px; padding: 20px; box-shadow: 0 0 20px #00f2ff; max-width: 600px; margin: auto; }
-        h1 { text-shadow: 0 0 10px #00f2ff; }
-        .status { color: #00ff88; font-size: 0.9em; margin-bottom: 20px; }
-        .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .btn-core { background: rgba(0, 242, 255, 0.1); border: 1px solid #00f2ff; color: #fff; padding: 15px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
-        .btn-core:hover { background: #00f2ff; color: #000; box-shadow: 0 0 15px #00f2ff; }
-        #output { margin-top: 20px; border-top: 1px solid #00f2ff; padding-top: 20px; font-style: italic; color: #aaa; }
+        body { background: #01050a; color: #00f2ff; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 50px; }
+        .panel { border: 2px solid #00f2ff; border-radius: 20px; padding: 30px; box-shadow: 0 0 30px #00f2ff; display: inline-block; }
+        button { background: rgba(0,242,255,0.1); border: 1px solid #00f2ff; color: #fff; padding: 15px 30px; border-radius: 10px; cursor: pointer; margin: 10px; font-weight: bold; }
+        button:hover { background: #00f2ff; color: #000; }
+        #log { margin-top: 20px; color: #00ff88; font-family: monospace; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>VERA-AI-CORE</h1>
-        <div class="status">● SISTEMA DE GENERACIÓN ACTIVO | SINCRONÍA OK</div>
-        
-        <div class="menu">
-            <button class="btn-core" onclick="generar('meme')">PROCESAR MEME</button>
-            <button class="btn-core" onclick="generar('comedia')">GUION COMEDIA</button>
-            <button class="btn-core" onclick="generar('info')">INFO / ENSEÑANZA</button>
-            <button class="btn-core" onclick="generar('video')">GENERAR VIDEO (BETA)</button>
-        </div>
-
-        <div id="output">Esperando órdenes de Martín...</div>
+    <div class="panel">
+        <h1>VERA-AI CORE: FACTORY</h1>
+        <p>Generando activos para el Bunker de Hardware</p>
+        <button onclick="ejecutar('trends')">ESCANEAR TENDENCIAS</button>
+        <button onclick="ejecutar('video')">PRODUCIR VIDEO</button>
+        <div id="log">SISTEMA LISTO...</div>
     </div>
-
     <script>
-        function generar(tipo) {
-            const out = document.getElementById('output');
-            out.innerHTML = "Analizando tendencias en /trends... <br> Procesando en /brain... <br> Generando en /factory... <br><br>";
-            
-            // Simulación de lógica de IA bajo el Decálogo de Hierro
+        function ejecutar(cmd) {
+            const log = document.getElementById('log');
+            log.innerHTML = "CONECTANDO CON /trends... <br>ANALIZANDO MONETIZACIÓN...";
             setTimeout(() => {
-                if(tipo === 'meme') out.innerHTML += "✅ MEME GENERADO: 'Cuando el trading tiene honestidad y luz azul'.";
-                if(tipo === 'info') out.innerHTML += "✅ ENSEÑANZA: '3 pasos para configurar Coinbase Advanced con precisión'.";
-                if(tipo === 'video') out.innerHTML += "✅ ESTRUCTURA DE VIDEO: Generando clips con luz estética de fondo.";
-            }, 1500);
+                log.innerHTML = "ORDEN RECIBIDA: Generando contenido viral de alta rentabilidad.";
+            }, 2000);
         }
     </script>
 </body>
