@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VERA-AI | Factory de Contenidos</title>
+    <style>
+        body { background: #01050a; color: #00f2ff; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 50px; }
+        .panel { border: 2px solid #00f2ff; border-radius: 20px; padding: 30px; box-shadow: 0 0 30px #00f2ff; display: inline-block; }
+        button { background: rgba(0,242,255,0.1); border: 1px solid #00f2ff; color: #fff; padding: 15px 30px; border-radius: 10px; cursor: pointer; margin: 10px; font-weight: bold; }
+        button:hover { background: #00f2ff; color: #000; }
+        #log { margin-top: 20px; color: #00ff88; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <h1>VERA-AI CORE: FACTORY</h1>
+        <p>Generando activos para el Bunker de Hardware</p>
+        <button onclick="ejecutar('trends')">ESCANEAR TENDENCIAS</button>
+        <button onclick="ejecutar('video')">PRODUCIR VIDEO</button>
+        <div id="log">SISTEMA LISTO...</div>
+    </div>
+    <script>
+        function ejecutar(cmd) {
+            const log = document.getElementById('log');
+            log.innerHTML = "CONECTANDO CON /trends... <br>ANALIZANDO MONETIZACIÓN...";
+            setTimeout(() => {
+                log.innerHTML = "ORDEN RECIBIDA: Generando contenido viral de alta rentabilidad.";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
